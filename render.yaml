@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: assetprim-db-test
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: APP_DEBUG
+        value: "false"
+      - key: DB_PORT
+        value: "3306"
+      - key: DB_CHARSET
+        value: utf8mb4
+      - key: DB_SSL
+        value: "false"
